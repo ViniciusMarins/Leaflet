@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- incluir css leaflet-->
+    <link rel="stylesheet" href="bibliotecas/leaflet/leaflet.css">
+    <!-- incluir js leaflet-->
+    <script src="bibliotecas/leaflet/leaflet.js"></script>
+
+    <!-- estilo personalizado-->
+    <link rel="stylesheet" href="layout/estilo.css">
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+
+            // initialize the map on the "map" div with a given center and zoom
+            var map = L.map('mapaId', {
+                center: [-23, -51],
+                zoom: 8
+            });
+
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+        }
+    </script>
+
+    <h1>
+        Leaflet!
+    </h1>
+
+    <div id="mapaId"></div>
+
+</body>
+
+</html>
